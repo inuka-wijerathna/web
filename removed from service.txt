@@ -1,0 +1,69 @@
+    <!-- Global Sourcing Map -->
+    <section class="global-map">
+        <div class="container">
+            <h2 class="section-title">Our Global Sourcing Network</h2>
+            <p class="section-subtitle">We source quality parts and Items from trusted suppliers worldwide</p>
+            <div class="map-container">
+                <div class="region">
+                    <h3>China</h3>
+                    <ul>
+                        <li>Precision machinery from Germany</li>
+                        <li>Hydraulic systems from Italy</li>
+                        <li>Automation components from Sweden</li>
+                    </ul>
+                </div>
+
+                <div class="region">
+                    <h3>India</h3>
+                    <ul>
+                        <li>Advanced electronics from Japan</li>
+                        <li>Manufacturing equipment from South Korea</li>
+                        <li>Production machinery from China</li>
+                    </ul>
+                </div><div class="region">
+                    <h3>Philippines</h3>
+                    <ul>
+                        <li>Advanced electronics from Japan</li>
+                        <li>Manufacturing equipment from South Korea</li>
+                        <li>Production machinery from China</li>
+                    </ul>
+                </div>
+
+                <div class="region">
+                    <h3>Malaysia</h3>
+                    <ul>
+                        <li>Industrial controls from USA</li>
+                        <li>Specialized components from Canada</li>
+                        <li>Custom machinery from Mexico</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>   
+        
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Hawkline International found and imported a specialized component that we had been searching for months. Their global sourcing capabilities are impressive."</p>
+                        <div class="testimonial-author">
+                            <h4>Michael Chen</h4>
+                            <p>Procurement Director, Advanced Manufacturing Co.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"The quality of the imported machinery exceeded our expectations, and their handling of all logistics and customs clearance made the process completely seamless."</p>
+                        <div class="testimonial-author">
+                            <h4>Laura Rodriguez</h4>
+                            <p>Operations Manager, Precision Industries Ltd.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

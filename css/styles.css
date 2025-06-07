@@ -1,0 +1,418 @@
+/* Main Styles - styles.css */
+/* Base styles for the entire site */
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Color Variables */
+    --primary-color: #84600b;
+    --primary-light: #edab11;
+    --primary-dark: #2c2f2f;
+    
+    --secondary-color: #6c9a8b;
+    --secondary-light: #8ab5a8;
+    --secondary-dark: #557c6f;
+    
+    --accent-color: #edab11;
+    --accent-light: #f4c44d;
+    --accent-dark: #84600b;
+
+    --neutral-900: #2c2f2f;
+    --neutral-800: #3d4040;
+    --neutral-700: #4e5151;
+    --neutral-600: #5f6262;
+    --neutral-500: #707373;
+    --neutral-400: #818484;
+    --neutral-300: #929595;
+    --neutral-200: #a3a6a6;
+    --neutral-100: #b4b7b7;
+    --neutral-50: #c5c8c8;
+    
+    /* Typography */
+    --font-primary: 'Inter', sans-serif;
+    
+    /* Spacing (8px grid system) */
+    --space-1: 8px;
+    --space-2: 16px;
+    --space-3: 24px;
+    --space-4: 32px;
+    --space-5: 40px;
+    --space-6: 48px;
+    --space-7: 56px;
+    --space-8: 64px;
+    
+    /* Shadows */
+    --shadow-sm: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    --shadow-md: 4px 4px 0 rgba(0, 0, 0, 0.1);
+    --shadow-lg: 6px 6px 0 rgba(0, 0, 0, 0.1);
+    --shadow-xl: 8px 8px 0 rgba(0, 0, 0, 0.1);
+    
+    /* Border Radius - Angular design */
+    --radius-sm: 0;
+    --radius-md: 0;
+    --radius-lg: 0;
+    --radius-xl: 0;
+    
+    /* Transitions */
+    --transition-fast: 0.15s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+/* Global styles */
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: var(--neutral-900);
+    background-color: var(--neutral-50);
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-2);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: var(--space-2);
+    color: var(--primary-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+h1 {
+    font-size: 3.6rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+h5 {
+    font-size: 1.8rem;
+}
+
+h6 {
+    font-size: 1.6rem;
+}
+
+p {
+    margin-bottom: var(--space-2);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+a:hover {
+    color: var(--primary-light);
+}
+
+ul, ol {
+    margin-bottom: var(--space-2);
+    padding-left: var(--space-3);
+}
+
+/* Button styles */
+.btn {
+    display: inline-block;
+    font-weight: 500;
+    text-align: center;
+    padding: var(--space-1) var(--space-3);
+    border-radius: 0;
+    transition: all var(--transition-normal);
+    cursor: pointer;
+    border: none;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 2px;
+    left: 2px;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: -1;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-light);
+    color: white;
+    transform: translate(-2px, -2px);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-light);
+    color: white;
+    transform: translate(-2px, -2px);
+}
+
+.btn-accent {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.btn-accent:hover {
+    background-color: var(--accent-light);
+    color: white;
+    transform: translate(-2px, -2px);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translate(-2px, -2px);
+}
+
+.btn-text {
+    background-color: transparent;
+    color: var(--primary-color);
+    padding: var(--space-1) 0;
+    position: relative;
+    font-weight: bolder;
+}
+
+.btn-text:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width var(--transition-normal);
+}
+
+.btn-text:hover {
+    color: var(--primary-light);
+}
+
+.btn-text:hover:after {
+    width: 100%;
+}
+
+/* Section styles */
+section {
+    padding: var(--space-6) 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: var(--space-4);
+    position: relative;
+    padding-bottom: var(--space-2);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.section-title:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--neutral-600);
+    margin-bottom: var(--space-4);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Card styles */
+.card {
+    background-color: white;
+    border-radius: 0;
+    box-shadow: var(--shadow-md);
+    padding: var(--space-3);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    position: relative;
+    border: 1px solid var(--neutral-200);
+}
+
+.card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Helpers */
+.text-center {
+    text-align: center;
+}
+
+.mt-1 { margin-top: var(--space-1); }
+.mt-2 { margin-top: var(--space-2); }
+.mt-3 { margin-top: var(--space-3); }
+.mt-4 { margin-top: var(--space-4); }
+
+.mb-1 { margin-bottom: var(--space-1); }
+.mb-2 { margin-bottom: var(--space-2); }
+.mb-3 { margin-bottom: var(--space-3); }
+.mb-4 { margin-bottom: var(--space-4); }
+
+/* Utility Classes */
+.bg-primary { background-color: var(--primary-color); }
+.bg-secondary { background-color: var(--secondary-color); }
+.bg-accent { background-color: var(--accent-color); }
+.bg-light { background-color: var(--neutral-100); }
+.bg-white { background-color: white; }
+
+.text-primary { color: var(--primary-color); }
+.text-secondary { color: var(--secondary-color); }
+.text-accent { color: var(--accent-color); }
+.text-dark { color: var(--neutral-900); }
+.text-light { color: var(--neutral-100); }
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    html {
+        font-size: 60%;
+    }
+    
+    .container {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 58%;
+    }
+    
+    section {
+        padding: var(--space-4) 0;
+    }
+    
+    h1 {
+        font-size: 3.2rem;
+    }
+    
+    h2 {
+        font-size: 2.6rem;
+    }
+}
+
+@media (max-width: 576px) {
+    html {
+        font-size: 55%;
+    }
+    
+    .container {
+        padding: 0 var(--space-1);
+    }
+    
+    .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: var(--space-2);
+    }
+}
+
+/* CTA Section */
+.cta-section {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: var(--space-6) 0;
+    position: relative;
+    padding-bottom: 70px;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--primary-dark) 0%, transparent 100%);
+    opacity: 0.1;
+}
+
+.cta-section h2 {
+    color: white;
+    margin-bottom: var(--space-2);
+}
+
+.cta-section p {
+    font-size: 1.8rem;
+    margin-bottom: var(--space-3);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-section .btn-primary {
+    background-color: var(--accent-color);
+}
+
+.cta-section .btn-primary:hover {
+    background-color: var(--accent-light);
+}
+
+/* Logo placeholder styles */
+.logo-placeholder {
+    width: 239px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.logof-placeholder {
+    width: 147px;
+    height: 150px;
+    object-fit: cover;
+}
